@@ -1,0 +1,18 @@
+[
+    {
+        "caption": "AtCoder Friends: New Contest",
+        "command": "at_coder_friends_setup"
+    },
+    {
+        "caption": "AtCoder Friends: Test One",
+        "command": "at_coder_friends_test_one"
+    },
+    {
+        "caption": "AtCoder Friends: Test All",
+        "command": "at_coder_friends_test_all"
+    },
+    {
+        "caption": "AtCoder Friends: Submit",
+        "command": "at_coder_friends_submit"
+    },
+]
