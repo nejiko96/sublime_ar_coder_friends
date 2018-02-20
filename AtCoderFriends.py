@@ -3,20 +3,24 @@ import sublime_plugin
 
 import os
 
-class AtCoderCommand(sublime_plugin.WindowCommand):
-  def run_on_file(self, af_cmd):
+class AtCoderFriendsCommand(sublime_plugin.WindowCommand):
+  def run_af_on_file(self, af_cmd):
     if self.window.active_view() and self.window.active_view().file_name():
       path = self.window.active_view().file_name()
     else:
       sublime.error_message('AtCoderFriends: No file is opened')
       return
+    self.run_af(af_cmd, path)
+
+  def run_af(self, af_cmd, path):
     args = ['at_coder_friends', af_cmd, path]
     self.window.run_command('exec', {
       'cmd': args,
       'shell': True
     })
 
-class AtCoderFriendsSetupCommand(sublime_plugin.WindowCommand):
+
+class AtCoderFriendsSetupCommand(AtCoderFriendsCommand):
   def run(self):
     if self.window.folders():
       self.dir = self.window.folders()[0]
@@ -31,20 +35,16 @@ class AtCoderFriendsSetupCommand(sublime_plugin.WindowCommand):
     if contest == '':
       return
     path = os.path.join(self.dir, contest)
-    args = ['at_coder_friends', 'setup', path]
-    self.window.run_command('exec', {
-      'cmd': args,
-      'shell': True
-    })
+    self.run_af('setup', path)
 
-class AtCoderFriendsTestOneCommand(AtCoderCommand):
+class AtCoderFriendsTestOneCommand(AtCoderFriendsCommand):
   def run(self):
-    self.run_on_file('test-one')
+    self.run_af_on_file('test-one')
 
-class AtCoderFriendsTestAllCommand(AtCoderCommand):
+class AtCoderFriendsTestAllCommand(AtCoderFriendsCommand):
   def run(self):
-    self.run_on_file('test-all')
+    self.run_af_on_file('test-all')
 
-class AtCoderFriendsSubmitCommand(AtCoderCommand):
+class AtCoderFriendsSubmitCommand(AtCoderFriendsCommand):
   def run(self):
-    self.run_on_file('submit')
+    self.run_af_on_file('submit')
