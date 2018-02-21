@@ -15,7 +15,7 @@ class AtCoderFriendsCommand(sublime_plugin.WindowCommand):
   def run_af(self, af_cmd, path):
     args = ['at_coder_friends', af_cmd, path]
     self.window.run_command('exec', {
-      'cmd': args,
+      'cmd': ' '.join(args),
       'shell': True
     })
 
