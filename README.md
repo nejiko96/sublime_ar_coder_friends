@@ -25,7 +25,7 @@ password: <password>
 
 ## Usage
 
-Open Command Pallete and select __AtCoderFriends:*__ command.
+Open Command Palette and select __AtCoderFriends:*__ command.
 
 - **AtCoderFriends: New Contest** creates new contest folder and emits example data and source skeletons
 
@@ -33,4 +33,4 @@ Open Command Pallete and select __AtCoderFriends:*__ command.
 
 - **AtCoderFriends: Test All** runs all test cases of current file.
 
-- **AtCoderFriends: Submit** submits current file.
+- **AtCoderFriends: Submit** submits code from current file.
