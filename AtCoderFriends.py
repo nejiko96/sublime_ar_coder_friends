@@ -12,10 +12,13 @@ class AtCoderFriendsCommand(sublime_plugin.WindowCommand):
       return
     self.run_af(af_cmd, path)
 
-  def run_af(self, af_cmd, path):
+  def run_af(self, af_cmd, path, work_dir=None):
     args = ['at_coder_friends', af_cmd, path]
+    if not work_dir:
+      work_dir =  os.path.dirname(path)
     self.window.run_command('exec', {
       'cmd': ' '.join(args),
+      'working_dir': work_dir,
       'shell': True
     })
 
@@ -35,7 +38,7 @@ class AtCoderFriendsSetupCommand(AtCoderFriendsCommand):
     if contest == '':
       return
     path = os.path.join(self.dir, contest)
-    self.run_af('setup', path)
+    self.run_af('setup', path, work_dir=self.dir)
 
 class AtCoderFriendsTestOneCommand(AtCoderFriendsCommand):
   def run(self):
