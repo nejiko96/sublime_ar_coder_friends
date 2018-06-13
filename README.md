@@ -4,6 +4,9 @@
 
 Sublime Text plugin that runs [AtCoderFriends](https://github.com/nejiko96/at_coder_friends) commands on current file or project root folder.
 
+## Demo
+![Demo](https://user-images.githubusercontent.com/5318128/41357630-8c8bb450-6f61-11e8-9f6b-c0ebc294a4f4.gif)
+
 ## Install
 
 - Install [AtCoderFriends](https://github.com/nejiko96/at_coder_friends).
