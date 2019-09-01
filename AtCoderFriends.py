@@ -51,3 +51,8 @@ class AtCoderFriendsTestAllCommand(AtCoderFriendsCommand):
 class AtCoderFriendsSubmitCommand(AtCoderFriendsCommand):
   def run(self):
     self.run_af_on_file('submit')
+
+class AtCoderFriendsOpenContestCommand(AtCoderFriendsCommand):
+  def run(self):
+    self.run_af_on_file('open-contest')
+
