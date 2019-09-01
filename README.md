@@ -37,3 +37,5 @@ Open Command Palette and select __AtCoderFriends:*__ command.
 - **AtCoderFriends: Test All** runs all test cases of current file.
 
 - **AtCoderFriends: Submit** submits code from current file.
+
+- **AtCoderFriends: Open Contest Page** opens AtCoder contest page in browser.

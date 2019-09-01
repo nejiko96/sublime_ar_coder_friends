@@ -15,4 +15,8 @@
         "caption": "AtCoder Friends: Submit",
         "command": "at_coder_friends_submit"
     },
+    {
+        "caption": "AtCoder Friends: Open Contest Page",
+        "command": "at_coder_friends_open_contest"
+    },
 ]
